@@ -23,6 +23,24 @@
         background-size: cover;
         height: 100vh;
     }
+    #s_header{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+    #s_header aside{
+        text-align: center;
+        grid-column: 2/4;
+        grid-row: 2/3;
+    }
+    @media(max-width:992px){
+        #s_header .display-4{
+            font-size:30px;
+        }
+        #s_header h5{
+            font-size:12px;
+        }
+    }
 /* s_trio */
 
 /* s_model_of_the_week */
