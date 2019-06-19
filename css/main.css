@@ -42,7 +42,34 @@
         }
     }
 /* s_trio */
-
+    .trioGrid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+    }
+    @media(max-width:768px){
+        .trioGrid{
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+        }
+        .subtrio{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(1, 1fr);
+            grid-gap: 15px;
+        }
+    }
+    @media(max-width:576px){
+        .trioGrid{
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(2, auto);
+            grid-gap: 10px;
+        }
+        .subtrio{
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(3, auto);
+        }
+    }
 /* s_model_of_the_week */
 
 /* s_about */
