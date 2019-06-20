@@ -11,7 +11,7 @@
 #s_prints{background: #f6f5fa}
 #s_paintings{background: #131514}
 #s_drawings{background: #f0e9d7}
-#s_contact{background: #fefaf7}
+#s_contact{background: #e9e9e9}
 #s_footer{background: #414046}
 #s_copyright{background: #000}
 
@@ -246,7 +246,52 @@
 /* s_drawings */
 
 /* s_contact */
-
+    .contact-grid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: repeat(2, 1fr);
+        grid-gap: 10px;
+        grid-template: 
+            "contact-copy contact-map contact-map"
+            "contact-img contact-map contact-map"
+    }
+    .contact-copy{
+        grid-area: contact-copy;
+    }
+    .contact-map{
+        grid-area: contact-map;
+    }
+    .contact-img{
+        grid-area: contact-img;
+    }
+    @media(max-width:768px){
+        .contact-grid{
+            grid-template-columns: repeat(2, auto);
+            grid-auto-rows: repeat(3, auto);
+            grid-template: 
+                "contact-img contact-copy"
+                "contact-map contact-map"
+                "contact-map contact-map";
+        }
+        .contact-img{
+            width: 30%;
+            justify-self: start;
+        }
+    }
+    @media(max-width:576px){
+        .contact-grid{
+            grid-template-columns: auto;
+            grid-auto-rows: repeat(4, auto);
+            grid-template: 
+                "contact-img"
+                "contact-copy"
+                "contact-map"
+                "contact-map";
+        }
+        .contact-img{
+            justify-self: center;
+        }
+    }
 /* s_footer */
 
 /* s_copyright */
