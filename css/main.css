@@ -9,7 +9,7 @@
 #s_model_of_the_week{background: #26221f}
 #s_about{background: #f0e9d7}
 #s_prints{background: #f6f5fa}
-#s_paintings{background: #414046}
+#s_paintings{background: #131514}
 #s_drawings{background: #f0e9d7}
 #s_contact{background: #fefaf7}
 #s_footer{background: #414046}
@@ -152,6 +152,37 @@
         box-shadow: 0px 0px 0px rgba(0, 0, 0, 0)
     }
 /* s_paintings */
+    .my-paintings-container{
+        display: grid;
+        min-height: 600px;
+        background: #fff;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: 
+        "one one two three three"
+        "one one four five five"
+        "six seven seven five five"
+        "six eight nine nine ten";
+        grid-gap: 2px;
+        border: 2px solid white;
+        outline: none;
+    }
+
+    #s_paintings aside{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+    }
+
+    #s_paintings .wind{
+        width: 60%;
+        justify-self: end; 
+        align-self: end;
+    }
+
+    .my-cursor{
+        cursor: pointer;
+        outline: none;
+    }
     .painting-1{
         background: url('../imgs/paintings/1.jpg');
         background-size: cover;
