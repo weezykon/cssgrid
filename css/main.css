@@ -8,7 +8,7 @@
 #s_trio{background: #fefaf7}
 #s_model_of_the_week{background: #26221f}
 #s_about{background: #f0e9d7}
-#s_prints{background: #fefaf7}
+#s_prints{background: #f6f5fa}
 #s_paintings{background: #414046}
 #s_drawings{background: #f0e9d7}
 #s_contact{background: #fefaf7}
@@ -139,47 +139,78 @@
         }
     }
 /* s_prints */
-
+    .grid-thumbs{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-gap: 10px;
+    }
+    .grid-thumbs img{
+        display: block;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4)
+    }
+    .grid-thumbs .bk-image{
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0)
+    }
 /* s_paintings */
     .painting-1{
         background: url('../imgs/paintings/1.jpg');
         background-size: cover;
+        background-position: cover;
+        grid-area: one;
     }
     .painting-2{
         background: url('../imgs/paintings/2.jpg');
         background-size: cover;
+        background-position: cover;
+        grid-area: two;
     }
     .painting-3{
         background: url('../imgs/paintings/3.jpg');
         background-size: cover;
+        background-position: cover;
+        grid-area: three;
     }
     .painting-4{
         background: url('../imgs/paintings/4.jpg');
         background-size: cover;
+        background-position: cover;
+        grid-area: four;
     }
     .painting-5{
         background: url('../imgs/paintings/5.jpg');
         background-size: cover;
+        background-position: cover;
+        grid-area: five;
     }
     .painting-6{
         background: url('../imgs/paintings/6.jpg');
         background-size: cover;
+        background-position: cover;
+        grid-area: six;
     }
     .painting-7{
         background: url('../imgs/paintings/7.jpg');
         background-size: cover;
+        background-position: cover;
+        grid-area: seven;
     }
     .painting-8{
         background: url('../imgs/paintings/8.jpg');
         background-size: cover;
+        background-position: cover;
+        grid-area: eight;
     }
     .painting-9{
         background: url('../imgs/paintings/9.jpg');
         background-size: cover;
+        background-position: cover;
+        grid-area: nine;
     }
     .painting-10{
         background: url('../imgs/paintings/10.jpg');
         background-size: cover;
+        background-position: cover;
+        grid-area: ten;
     }
 /* s_drawings */
 
