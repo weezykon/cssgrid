@@ -15,12 +15,32 @@
 
         <!-- Font Awesome -->
         <script src="https://kit.fontawesome.com/5efc211d4e.js"></script>
-        <title>Hello, world!</title>
+        <title>La Models Galerie</title>
     </head>
     <body id="top" class="bg-dark">
         <!-- <h1 style="font-family: 'Poiret One', cursive;">Hello, world!</h1>
         <h1 style="">Hello, world!</h1>
         <h1 style="font-family: 'Tulpen One', cursive;">Hello, world!</h1> -->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand text-danger" href="#top">La Models Galerie</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle Navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button> 
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-items"><a href="#s_trio" class="nav-link">Works</a></li>
+                        <li class="nav-items"><a href="#s_model_of_the_week" class="nav-link">Model Of The Week</a></li>
+                        <li class="nav-items"><a href="#s_prints" class="nav-link">Models</a></li>
+                        <li class="nav-items"><a href="#s_about" class="nav-link">About</a></li>
+                        <li class="nav-items"><a href="#s_drawings" class="nav-link">Drawings</a></li>
+                        <li class="nav-items"><a href="#s_footer" class="nav-link">Info</a></li>
+                        <li class="nav-items"><a href="#s_paintings" class="nav-link">Paintings</a></li>
+                        <li class="nav-items"><a href="#s_contact" class="nav-link">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
         <section id="s_header">
             <aside class="container">
                 <h1 class="text-danger display-4">Welcome</h1>
@@ -60,7 +80,7 @@
         </section>
         <section class="text-center py-5" id="s_model_of_the_week">
             <div class="container p-4">
-                <h1 class="text-danger">Main</h1>
+                <h1 class="text-danger">Model Of The Week</h1>
                 <img src="imgs/18.jpg" class="img-fluid my-3 border border-light" alt="">
                 <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere atque distinctio assumenda repellat officia voluptates illum voluptatibus labore quam, totam architecto adipisci. Sit, asperiores iure saepe quaerat unde cupiditate dolorum.</p>
             </div>
@@ -237,6 +257,20 @@
         </script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
+        <script>
+            $(document).ready(function(){
+                $('a[hrefˆ="#"]').on('click', function (e) {
+                    var target = this.hash,
+                    $target = $(target);
+
+                    $('html, body').stop().animate({
+                        'scrollTop': $target.offset().top
+                    }, 900, 'swing', function(){
+                        window.location.hash = target;
+                    })
+                });
+            })
         </script>
     </body>
 </html>
