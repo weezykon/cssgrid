@@ -71,7 +71,9 @@
         }
     }
 /* s_model_of_the_week */
-
+    #s_model_of_the_week img{
+        border-width: 5px !important;
+    }
 /* s_about */
     .aboutgrid{
         display: grid;
@@ -299,5 +301,92 @@
         }
     }
 /* s_footer */
+    .s_footer_grid{
+        font-size: small;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        grid-gap: 10px;
+        grid-template-areas: 
+        "footer-hours"
+        "footer-menu"
+        "footer-models"
+        "footer-other"
+        "footer-careers"
+        "footer-img"
+        ;
+    }
 
+    .footer_models{
+        text-align: center;
+    }
+
+    .footer_models, .footer_careers{
+        flex-direction: row-reverse;
+        text-align: right;
+    }
+
+    .footer_hours{
+        text-align: left;
+    }
+
+    .footer_img{
+        width: 50%;
+        justify-self: flex-end;
+    }
+
+    .footer_hours{
+        grid-area: footer-hours;
+    }
+    .footer_menu{
+        grid-area: footer-menu;
+    }
+    .footer_models{
+        grid-area: footer-models;
+    }
+    .footer_other{
+        grid-area: footer-other;
+    }
+    .footer_careers{
+        grid-area: footer-careers;
+    }
+    .footer_img{
+        grid-area: footer-img;
+    }
+    @media(max-width:767px){
+        .footer_menu, .footer_models, .footer_other, .footer_careers{
+            border-top: 1px dashed white;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            padding-top: 10px;
+            align-items: center; 
+        }
+
+        .footer_img{
+            transform: scaleX(-1);
+        }
+
+        .footer_hours{
+            text-align: center;
+        }
+    }
+
+    @media(min-width:768px){
+        .s_footer_grid{
+            font-size: inherit;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto;
+            grid-template-areas: 
+            "footer-hours footer-img"
+            "footer-menu footer-models"
+            "footer-other footer-careers"
+            ;
+        }
+        .footer_models, .footer_careers, .footer_careers h1{
+            flex: none;
+            padding-top: 0;
+            text-align: left;
+        }
+    }
 /* s_copyright */
