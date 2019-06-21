@@ -248,7 +248,15 @@
 
     @media(max-width:768px){
         .my-paintings-container{
-            min-height: 200px;
+            min-height: 300px;
+        }
+    }
+    @media(max-width:576px){
+        .my-paintings-container{
+            min-height: 400px;
+        }
+        #s_paintings .wind{
+            display: none;
         }
     }
 /* s_drawings */
